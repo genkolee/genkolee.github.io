@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>在线计算器</title>
+    <url>/2020/07/27/calc/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;前一段时间自学了html和javascript，编了一个计算器练习了一下，CSS部分使用别人的模板，CSS有些麻烦就不自己搞了。我当然知道实用价值为零！</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><form class="calc">
+  <p class="calc-display">
+    <input type="text" name="result" id="result" value="" class="calc-display-input" onfocus="this.blur()">
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button calc-button-gray" onclick="add('(')">(</button>
+    <button type="button" class="calc-button calc-button-gray" onclick="add(')')">)</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('%')">%</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('/')">/</button>
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button" onclick="add('7')">7</button>
+    <button type="button" class="calc-button" onclick="add('8')">8</button>
+    <button type="button" class="calc-button" onclick="add('9')">9</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('*')">*</button>
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button" onclick="add('4')">4</button>
+    <button type="button" class="calc-button" onclick="add('5')">5</button>
+    <button type="button" class="calc-button" onclick="add('6')">6</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('-')">-</button>
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button" onclick="add('1')">1</button>
+    <button type="button" class="calc-button" onclick="add('2')">2</button>
+    <button type="button" class="calc-button" onclick="add('3')">3</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('+')">+</button>
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button" onclick="add('0')">0</button>
+    <button type="button" class="calc-button" onclick="add('.')">.</button>
+    <button type="button" class="calc-button" onclick="copy('')">C</button>
+    <button type="button" class="calc-button calc-button-yellow calc-button-big" onclick="calc()">=</button>
+  </p>
+</form>
+
+<script>
+  function add(x) { document.getElementById('result').value += x }
+  function copy(x) { document.getElementById('result').value = x }
+  function calc() { try { copy(eval(document.getElementById('result').value)) } catch(calc) { copy('Error') } }
+</script>
+
+<link rel="stylesheet" href="/attach/calc/shell.css">]]></content>
+      <categories>
+        <category>tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>计算屏蔽已知活度的伽马点源所需铅层厚度</title>
+    <url>/2020/08/03/dose/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;课题组有时候需要知道屏蔽γ源需要的铅层厚度，当然可以用蒙特卡罗软件进行模拟，但是要想模拟效果好速度会很慢，正好前一段时间学习了辐射防护的课程，就利用公式编写了一个小脚本，结果不一定准确，娱乐一下还是可以的。</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><form oninput="dos()" class="dose_form">
+<fieldset class="dose_fieldset">
+  <legend>铅层厚度计算</legend>
+  <div>铅屏蔽层的厚度(单位:cm):</div>
+  <input type="text" id="thick" value="" style="background-color:#bccd95;text-align-last:right;" class="dose_inp" onfocus="this.blur()">
+  <div>请选择点源的种类:</div>
+  <select id="primary" class="dose_select">
+    <option>Co-60</option>
+    <option>Cs-137</option>
+  </select>
+  <div>核素的活度(单位:Ci):</div>
+  <input type="text" id="activity" required class="dose_inp">
+  <div>距放射源的距离(单位:m):</div>
+  <input type="text" id="range" required class="dose_inp">
+  <div>屏蔽后的效果<...(单位:mSv &frasl; h):</div>
+  <input type="text" id="dose" required class="dose_inp">
+  <input type="reset" value="重置" style="margin:10px 0;" class="dose_inp">
+</fieldset>
+</form>
+<p><center>注：此结果仅供参考，屏蔽效果参考值见阅读全文。</center></p>
+
+<script src="/attach/dose/dos.js"></script>
+
+<link rel="stylesheet" href="/attach/dose/shell.css">
+
+<a id="more"></a>
+
+<hr>
+<h1 id="屏蔽效果值参考"><a href="#屏蔽效果值参考" class="headerlink" title="屏蔽效果值参考"></a>屏蔽效果值参考</h1><h2 id="国家标准"><a href="#国家标准" class="headerlink" title="国家标准"></a>国家标准</h2><img src="/attach/dose/dose1.jpg" width=300/>
+
+<h2 id="近代物理研究所操作参考值"><a href="#近代物理研究所操作参考值" class="headerlink" title="近代物理研究所操作参考值"></a>近代物理研究所操作参考值</h2><img src="/attach/dose/dose2.jpg" width=400/>
+
+<h2 id="医学照射参考剂量"><a href="#医学照射参考剂量" class="headerlink" title="医学照射参考剂量"></a>医学照射参考剂量</h2><img src="/attach/dose/dose3.jpeg" width=800/>]]></content>
+      <categories>
+        <category>tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Polar Clock</title>
+    <url>/2020/09/29/clock/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;<a href="https://observablehq.com/@mbostock/polar-clock">原网站链接</a></p>
+<h1 id="如图"><a href="#如图" class="headerlink" title="如图"></a>如图</h1><div id="observablehq-8799067e"></div>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@mbostock/polar-clock.js?v=3";
+const inspect = Inspector.into("#observablehq-8799067e");
+(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+</script>]]></content>
+      <categories>
+        <category>just for fun</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>推荐几个制造噪音的网站</title>
+    <url>/2020/08/03/noise/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;发现了几个制造噪音的小游戏，PC、移动端都可。操作简单粗暴，可以解压，放松心情。下面会附上原始网站链接，后两个加载速度会有点慢，请耐心等待一会儿。</p>
+<center>注：不建议在舍友熟睡时操作，当然如果你和舍友有仇，那祝你好运！</center>
+
+<a id="more"></a>
+
+<h2 id="Mikutap"><a href="#Mikutap" class="headerlink" title="Mikutap"></a>Mikutap</h2><p>&emsp;&emsp;这个PC端是使用鼠标操作的，体验最好，移动端使用指尖滑动操作效果更好！</p>
+<center>
+<iframe src="https://wuzuhua.wuzuhua.cn/mikutap/" style="border: 3px solid #ccc" width="800" height="600"></iframe>
+
+<p>原网站链接：<a href="https://wuzuhua.wuzuhua.cn/mikutap/">Mikutap</a></p>
+</center>
+
+<h2 id="Patatap"><a href="#Patatap" class="headerlink" title="Patatap"></a>Patatap</h2><p>&emsp;&emsp;这个PC端是使用键盘操作的，不如第一个简单粗暴，但是移动端也是使用指尖操作。</p>
+<center>
+
+<p>原网站链接：<a href="https://patatap.com/">Patatap</a></p>
+</center>
+
+<h2 id="Typatone"><a href="#Typatone" class="headerlink" title="Typatone"></a>Typatone</h2><p>&emsp;&emsp;这个有些文艺范，首先输入一部分字母组合，停止操作后它会自动把它们连起来播放，还可以调节音乐风格。</p>
+<center>
+
+<p>原网站链接：<a href="https://typatone.com/">Typatone</a></p>
+</center>]]></content>
+      <categories>
+        <category>just for fun</category>
+      </categories>
+  </entry>
+</search>
