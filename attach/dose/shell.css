@@ -1,0 +1,20 @@
+.dose_form{
+  width: 300px;
+  margin: 0px auto;
+}
+.dose_fieldset{
+  padding:10px;
+}
+.dose_inp,.dose_select{
+  width:100%;
+  height:30px ;
+  line-height: 30px;
+  margin:0px 0;
+  border: none;
+  border:1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-style: 16px;
+  text-align:center;
+  text-align-last: center;
+}
