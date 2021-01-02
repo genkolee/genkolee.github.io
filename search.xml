@@ -157,4 +157,21 @@ const inspect = Inspector.into("#observablehq-8799067e");
         <category>just for fun</category>
       </categories>
   </entry>
+  <entry>
+    <title>Bubble</title>
+    <url>/2021/01/02/bubble/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个Bubble交互小程序，我可以玩一天😂。</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div class="chart" style="overflow:auto; width:100%;"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@d3/collision-detection/2.js?v=3";
+(new Runtime).module(define, name => {
+  if (name === "chart") return Inspector.into(".chart")();
+});
+</script>]]></content>
+      <categories>
+        <category>just for fun</category>
+      </categories>
+  </entry>
 </search>
