@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>一个程序员的交互式网页简历</title>
+    <url>/2021/01/02/cv/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这个简历是外国人写的，这里的应该是汉化版😂，它以一种类似超级玛丽游戏的方式给出各种信息，very interesting，可以说是前端程序员自带技能了，代码还是比较简单的，当然可以修改成自己的，但是可能会有版权问题，大家酌情使用。</p>
+<h1 id="interactive-resume"><a href="#interactive-resume" class="headerlink" title="interactive-resume"></a>interactive-resume</h1><iframe src="https://www.webhek.com/post/interactive-resume.html" style="border: 3px solid #ccc" width="800" height="700" scrolling=auto></iframe>
+
+<ul>
+<li><p>大佬原interactive-resume链接：<a href="http://www.rleonardi.com/interactive-resume/">点这里</a>；</p>
+</li>
+<li><p>此文,即汉化版链接：<a href="https://www.webhek.com/post/interactive-resume.html">点这里</a>。</p>
+</li>
+</ul>
+<blockquote>
+<p>代码就不附了，其实就在网页上，不是吗😂。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>just for fun</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Bubble</title>
     <url>/2021/01/02/bubble/</url>
     <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个Bubble交互小程序，我可以玩一天😂。</p>
@@ -12,6 +32,62 @@ import define from "https://api.observablehq.com/@d3/collision-detection/2.js?v=
 (new Runtime).module(define, name => {
   if (name === "chart") return Inspector.into(".chart")();
 });
+</script>]]></content>
+      <categories>
+        <category>just for fun</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>计算屏蔽已知活度的伽马点源所需铅层厚度</title>
+    <url>/2020/08/03/dose/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;课题组有时候需要知道屏蔽γ源需要的铅层厚度，当然可以用蒙特卡罗软件进行模拟，但是要想模拟效果好速度会很慢，正好前一段时间学习了辐射防护的课程，就利用公式编写了一个小脚本，结果不一定准确，娱乐一下还是可以的。</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><form oninput="dos()" style="width:300px;margin:0px auto">
+<fieldset style="padding:10px;">
+  <legend>铅层厚度计算</legend>
+  <div>铅屏蔽层的厚度(单位:cm):</div>
+  <input type="text" id="thick" value="" style="background-color:#bccd95;text-align-last:right;" class="dose_inp" onfocus="this.blur()">
+  <div>请选择点源的种类:</div>
+  <select id="primary" class="dose_inp">
+    <option>Co-60</option>
+    <option>Cs-137</option>
+  </select>
+  <div>核素的活度(单位:Ci):</div>
+  <input type="text" id="activity" required class="dose_inp">
+  <div>距放射源的距离(单位:m):</div>
+  <input type="text" id="range" required class="dose_inp">
+  <div>屏蔽后的效果<...(单位:mSv &frasl; h):</div>
+  <input type="text" id="dose" required class="dose_inp">
+  <input type="reset" value="重置" style="margin:10px 0;" class="dose_inp">
+</fieldset>
+</form>
+<p><center>注：此结果仅供参考，屏蔽效果参考值见阅读全文。</center></p>
+
+<script src="/attach/dose/dos.js"></script>
+
+<link rel="stylesheet" href="/attach/dose/shell.css">
+
+<a id="more"></a>
+
+<hr>
+<h1 id="屏蔽效果值参考"><a href="#屏蔽效果值参考" class="headerlink" title="屏蔽效果值参考"></a>屏蔽效果值参考</h1><h2 id="国家标准"><a href="#国家标准" class="headerlink" title="国家标准"></a>国家标准</h2><img src="/attach/dose/dose1.jpg" width=300/>
+
+<h2 id="近代物理研究所操作参考值"><a href="#近代物理研究所操作参考值" class="headerlink" title="近代物理研究所操作参考值"></a>近代物理研究所操作参考值</h2><img src="/attach/dose/dose2.jpg" width=400/>
+
+<h2 id="医学照射参考剂量"><a href="#医学照射参考剂量" class="headerlink" title="医学照射参考剂量"></a>医学照射参考剂量</h2><img src="/attach/dose/dose3.jpeg" width=800/>]]></content>
+      <categories>
+        <category>tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Polar Clock</title>
+    <url>/2020/09/29/clock/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个以类似星球公转代表当前时间的小程序。</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div id="observablehq-8799067e"></div>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@mbostock/polar-clock.js?v=3";
+const inspect = Inspector.into("#observablehq-8799067e");
+(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
 </script>]]></content>
       <categories>
         <category>just for fun</category>
@@ -69,73 +145,6 @@ import define from "https://api.observablehq.com/@d3/collision-detection/2.js?v=
       </categories>
   </entry>
   <entry>
-    <title>一个程序员的交互式网页简历</title>
-    <url>/2021/01/02/cv/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这个简历是外国人写的，这里的应该是汉化版😂，它以一种类似超级玛丽游戏的方式给出各种信息，very interesting，可以说是前端程序员自带技能了，代码还是比较简单的，当然可以修改成自己的，但是可能会有版权问题，大家酌情使用。</p>
-<h1 id="interactive-resume"><a href="#interactive-resume" class="headerlink" title="interactive-resume"></a>interactive-resume</h1><iframe src="https://www.webhek.com/post/interactive-resume.html" style="border: 3px solid #ccc" width="800" height="700" scrolling=auto></iframe>
-
-<ul>
-<li><p>大佬原interactive-resume链接：<a href="http://www.rleonardi.com/interactive-resume/">点这里</a>；</p>
-</li>
-<li><p>此文,即汉化版链接：<a href="https://www.webhek.com/post/interactive-resume.html">点这里</a>。</p>
-</li>
-</ul>
-<blockquote>
-<p>代码就不附了，其实就在网页上，不是吗😂。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>just for fun</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>计算屏蔽已知活度的伽马点源所需铅层厚度</title>
-    <url>/2020/08/03/dose/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;课题组有时候需要知道屏蔽γ源需要的铅层厚度，当然可以用蒙特卡罗软件进行模拟，但是要想模拟效果好速度会很慢，正好前一段时间学习了辐射防护的课程，就利用公式编写了一个小脚本，结果不一定准确，娱乐一下还是可以的。</p>
-<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><form oninput="dos()" style="width:300px;margin:0px auto">
-<fieldset style="padding:10px;">
-  <legend>铅层厚度计算</legend>
-  <div>铅屏蔽层的厚度(单位:cm):</div>
-  <input type="text" id="thick" value="" style="background-color:#bccd95;text-align-last:right;" class="dose_inp" onfocus="this.blur()">
-  <div>请选择点源的种类:</div>
-  <select id="primary" class="dose_inp">
-    <option>Co-60</option>
-    <option>Cs-137</option>
-  </select>
-  <div>核素的活度(单位:Ci):</div>
-  <input type="text" id="activity" required class="dose_inp">
-  <div>距放射源的距离(单位:m):</div>
-  <input type="text" id="range" required class="dose_inp">
-  <div>屏蔽后的效果<...(单位:mSv &frasl; h):</div>
-  <input type="text" id="dose" required class="dose_inp">
-  <input type="reset" value="重置" style="margin:10px 0;" class="dose_inp">
-</fieldset>
-</form>
-<p><center>注：此结果仅供参考，屏蔽效果参考值见阅读全文。</center></p>
-
-<script src="/attach/dose/dos.js"></script>
-
-<link rel="stylesheet" href="/attach/dose/shell.css">
-
-<a id="more"></a>
-
-<hr>
-<h1 id="屏蔽效果值参考"><a href="#屏蔽效果值参考" class="headerlink" title="屏蔽效果值参考"></a>屏蔽效果值参考</h1><h2 id="国家标准"><a href="#国家标准" class="headerlink" title="国家标准"></a>国家标准</h2><img src="/attach/dose/dose1.jpg" width=300/>
-
-<h2 id="近代物理研究所操作参考值"><a href="#近代物理研究所操作参考值" class="headerlink" title="近代物理研究所操作参考值"></a>近代物理研究所操作参考值</h2><img src="/attach/dose/dose2.jpg" width=400/>
-
-<h2 id="医学照射参考剂量"><a href="#医学照射参考剂量" class="headerlink" title="医学照射参考剂量"></a>医学照射参考剂量</h2><img src="/attach/dose/dose3.jpeg" width=800/>]]></content>
-      <categories>
-        <category>tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/2021/06/20/test/</url>
-    <content><![CDATA[<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>this is a test!!!</p>
-]]></content>
-  </entry>
-  <entry>
     <title>推荐几个制造噪音的网站</title>
     <url>/2020/08/03/noise/</url>
     <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;发现了几个制造噪音的小游戏，PC、移动端都可。操作简单粗暴，可以解压，放松心情。下面会附上原始网站链接，后两个加载速度会有点慢，请耐心等待一会儿。</p>
@@ -161,21 +170,6 @@ import define from "https://api.observablehq.com/@d3/collision-detection/2.js?v=
 
 <p>原网站链接：<a href="https://typatone.com/">Typatone</a></p>
 </center>]]></content>
-      <categories>
-        <category>just for fun</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Polar Clock</title>
-    <url>/2020/09/29/clock/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个以类似星球公转代表当前时间的小程序。</p>
-<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div id="observablehq-8799067e"></div>
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@mbostock/polar-clock.js?v=3";
-const inspect = Inspector.into("#observablehq-8799067e");
-(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
-</script>]]></content>
       <categories>
         <category>just for fun</category>
       </categories>
