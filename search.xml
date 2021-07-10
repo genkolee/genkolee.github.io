@@ -1,71 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Bubble</title>
-    <url>/2021/01/02/bubble/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个Bubble交互小程序，我可以玩一天😂。</p>
-<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div class="chart" style="overflow:auto; width:100%;"></div>
-
+    <title>Polar Clock</title>
+    <url>/2020/09/29/clock/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个以类似星球公转代表当前时间的小程序。</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div id="observablehq-8799067e"></div>
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@d3/collision-detection/2.js?v=3";
-(new Runtime).module(define, name => {
-  if (name === "chart") return Inspector.into(".chart")();
-});
+import define from "https://api.observablehq.com/@mbostock/polar-clock.js?v=3";
+const inspect = Inspector.into("#observablehq-8799067e");
+(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
 </script>]]></content>
       <categories>
         <category>just for fun</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>在线计算器</title>
-    <url>/2020/07/27/calc/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;前一段时间自学了html和javascript，编了一个计算器练习了一下，CSS部分使用别人的模板，CSS有些麻烦就不自己搞了。我当然知道实用价值为零！</p>
-<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><form class="calc">
-  <p class="calc-display">
-    <input type="text" name="result" id="result" value="" class="calc-display-input" onfocus="this.blur()">
-  </p>
-  <p class="calc-row">
-    <button type="button" class="calc-button calc-button-gray" onclick="add('(')">(</button>
-    <button type="button" class="calc-button calc-button-gray" onclick="add(')')">)</button>
-    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('%')">%</button>
-    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('/')">/</button>
-  </p>
-  <p class="calc-row">
-    <button type="button" class="calc-button" onclick="add('7')">7</button>
-    <button type="button" class="calc-button" onclick="add('8')">8</button>
-    <button type="button" class="calc-button" onclick="add('9')">9</button>
-    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('*')">*</button>
-  </p>
-  <p class="calc-row">
-    <button type="button" class="calc-button" onclick="add('4')">4</button>
-    <button type="button" class="calc-button" onclick="add('5')">5</button>
-    <button type="button" class="calc-button" onclick="add('6')">6</button>
-    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('-')">-</button>
-  </p>
-  <p class="calc-row">
-    <button type="button" class="calc-button" onclick="add('1')">1</button>
-    <button type="button" class="calc-button" onclick="add('2')">2</button>
-    <button type="button" class="calc-button" onclick="add('3')">3</button>
-    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('+')">+</button>
-  </p>
-  <p class="calc-row">
-    <button type="button" class="calc-button" onclick="add('0')">0</button>
-    <button type="button" class="calc-button" onclick="add('.')">.</button>
-    <button type="button" class="calc-button" onclick="copy('')">C</button>
-    <button type="button" class="calc-button calc-button-yellow calc-button-big" onclick="calc()">=</button>
-  </p>
-</form>
-
-<script>
-  function add(x) { document.getElementById('result').value += x }
-  function copy(x) { document.getElementById('result').value = x }
-  function calc() { try { copy(eval(document.getElementById('result').value)) } catch(calc) { copy('Error') } }
-</script>
-
-<link rel="stylesheet" href="/attach/calc/shell.css">]]></content>
-      <categories>
-        <category>tool</category>
       </categories>
   </entry>
   <entry>
@@ -89,16 +36,174 @@ import define from "https://api.observablehq.com/@d3/collision-detection/2.js?v=
       </categories>
   </entry>
   <entry>
-    <title>Polar Clock</title>
-    <url>/2020/09/29/clock/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个以类似星球公转代表当前时间的小程序。</p>
-<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div id="observablehq-8799067e"></div>
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@mbostock/polar-clock.js?v=3";
-const inspect = Inspector.into("#observablehq-8799067e");
-(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
-</script>]]></content>
+    <title>Resume</title>
+    <url>/2021/07/10/resume/</url>
+    <content><![CDATA[<div style="width:100%;text-align:left;border:2px solid #ccc;margin:0px auto;padding:50px;width:700px;">
+
+<h1 align='center'>个人简历</h1>
+
+<a id="more"></a>
+
+<h2 align='left'>基本信息</h2>
+
+<div style="width:100%">
+  <table border="1" height="160" width="60%" cellspacing="0" align="left">
+    <tr align="center">
+      <td>姓名</td>
+      <td>***</td>
+      <td>出生日期</td>
+      <td>***</td>
+      <td rowspan="6"><img src="/about/qrcode.jpg" width="120"></td>
+    </tr>
+    <tr align="center">
+      <td>性别</td>
+      <td>男</td>
+      <td>政治面貌</td>
+      <td>***</td>
+    </tr>
+    <tr align="center">
+      <td>民族</td>
+      <td>汉</td>
+      <td>身份证号</td>
+      <td>***</td>
+    </tr>
+    <tr align="center">
+      <td>联系方式</td>
+      <td>***</td>
+      <td>通讯地址</td>
+      <td>兰州大学</td>
+    </tr>
+    <tr align="center">
+      <td>电子邮件</td>
+      <td>***</td>
+      <td>计算机</td>
+      <td>NCRE2(C语言)</td>
+    </tr>
+    <tr align="center">
+      <td>申请专业、导师</td>
+      <td>***</td>
+      <td>英语</td>
+      <td>CET6</td>
+    </tr>
+
+  </table>
+
+</div>
+
+<h2 align='left'>教育背景</h2>
+
+  <table border="1" height="" width="100%" cellspacing="0" align="left">
+    <tr align="center">
+      <td>2019至今</td>
+      <td>兰州大学核科学与技术学院</td>
+      <td>粒子物理与原子核物理</td>
+      <td>硕士</td>
+      <td></td>
+    </tr>
+    <tr align="center">
+      <td>2015.09-2019.06</td>
+      <td>兰州大学核科学与技术学院</td>
+      <td>应用物理（核物理基地班）</td>
+      <td>学士</td>
+      <td>GPA: <5</td>
+    </tr>
+
+  </table>
+
+<h2 align='left'>学术成果</h2>
+
+<h3 align='left'>专利</h3>
+
+  <table border="1" height="" width="100%" cellspacing="0" align="left">
+    <tr align="left">
+      <td width='70%'><li>***</li></td>
+      <td>三作</td>
+      <td>在审</td>
+    </tr>
+
+  </table>
+
+<h3 align='left'>论文</h3>
+
+  <table border="1" height="" width="100%" cellspacing="0" align="left">
+    <tr align="left">
+      <td width='70%'><li>***</li></td>
+      <td>二作</td>
+      <td>已投</td>
+    </tr>
+    <tr align="left">
+      <td><li>***</li></td>
+      <td>一作</td>
+      <td>在投</td>
+    </tr>
+    </table>
+
+<h2 align='left'>科研工作（主要）</h2>
+
+<h3 align='right'>负责项目</h3>
+
+  <table border="1" height="" width="100%" cellspacing="0" align="left">
+    <tr align="left">
+      <td><li>***</li></td>
+      <td rowspan="3"><img src="/about/qrcode.jpg" width="80"></td>
+    </tr>
+    <tr align="left">
+      <td><li>***</li></td>
+    </tr>
+    <tr>
+      <td>注：***</td>
+    </tr>
+
+  </table>
+
+<h3 align='right'>参与项目</h3>
+
+  <table border="1" height="" width="100%" cellspacing="0" align="left">
+    <tr align="left">
+      <td>
+        <li>***</li>
+        <li>***</li>
+      </td>
+    </tr>
+
+  </table>
+
+<h2 align='left'>专业技能</h2>
+
+  <table border="1" height="" width="100%" cellspacing="0" align="left">
+    <tr align="left">
+      <td>
+        <li>***</li>
+        <li>***</li>
+        <li>***</li>
+        <li>***</li>
+        <li>***</li>
+      </td>
+    </tr>
+
+  </table>
+
+<h2 align='left'>荣誉奖励</h2>
+
+  <table border="1" height="" width="100%" cellspacing="0" align="left">
+    <tr align="left">
+      <td>硕士</td>
+      <td><li>***</li></td>
+    </tr>
+    <tr align="left">
+      <td rowspan="2">本科</td>
+      <td><li>***</li></td>
+    </tr>
+    <tr align="left">
+      <td><li>***</li></td>
+    </tr>
+
+  </table>
+
+<h2 align='left'>硕士论文开题报告及主要内容</h2>
+
+<p>…</p>
+</div>]]></content>
       <categories>
         <category>just for fun</category>
       </categories>
@@ -175,195 +280,69 @@ const inspect = Inspector.into("#observablehq-8799067e");
       </categories>
   </entry>
   <entry>
-    <title>resume</title>
-    <url>/2021/07/10/resume/</url>
-    <content><![CDATA[<div style="width:100%;text-align:left;border:2px solid #ccc;margin:0px auto;padding:50px;width:800px;">
+    <title>在线计算器</title>
+    <url>/2020/07/27/calc/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;前一段时间自学了html和javascript，编了一个计算器练习了一下，CSS部分使用别人的模板，CSS有些麻烦就不自己搞了。我当然知道实用价值为零！</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><form class="calc">
+  <p class="calc-display">
+    <input type="text" name="result" id="result" value="" class="calc-display-input" onfocus="this.blur()">
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button calc-button-gray" onclick="add('(')">(</button>
+    <button type="button" class="calc-button calc-button-gray" onclick="add(')')">)</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('%')">%</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('/')">/</button>
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button" onclick="add('7')">7</button>
+    <button type="button" class="calc-button" onclick="add('8')">8</button>
+    <button type="button" class="calc-button" onclick="add('9')">9</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('*')">*</button>
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button" onclick="add('4')">4</button>
+    <button type="button" class="calc-button" onclick="add('5')">5</button>
+    <button type="button" class="calc-button" onclick="add('6')">6</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('-')">-</button>
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button" onclick="add('1')">1</button>
+    <button type="button" class="calc-button" onclick="add('2')">2</button>
+    <button type="button" class="calc-button" onclick="add('3')">3</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('+')">+</button>
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button" onclick="add('0')">0</button>
+    <button type="button" class="calc-button" onclick="add('.')">.</button>
+    <button type="button" class="calc-button" onclick="copy('')">C</button>
+    <button type="button" class="calc-button calc-button-yellow calc-button-big" onclick="calc()">=</button>
+  </p>
+</form>
 
-<h1 align='center'>个人简历</h1>
+<script>
+  function add(x) { document.getElementById('result').value += x }
+  function copy(x) { document.getElementById('result').value = x }
+  function calc() { try { copy(eval(document.getElementById('result').value)) } catch(calc) { copy('Error') } }
+</script>
 
-<a id="more"></a>
+<link rel="stylesheet" href="/attach/calc/shell.css">]]></content>
+      <categories>
+        <category>tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Bubble</title>
+    <url>/2021/01/02/bubble/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个Bubble交互小程序，我可以玩一天😂。</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div class="chart" style="overflow:auto; width:100%;"></div>
 
-<h2 align='left'>基本信息</h2>
-<hr>
-
-<div style="width:100%">
-  <table frame=void rules=none border="1" height="160" width="80%" cellspacing="0" align="left">
-
-<pre><code>&lt;tr align=&quot;center&quot;&gt;
-  &lt;td&gt;姓名&lt;/td&gt;
-  &lt;td&gt;***&lt;/td&gt;
-  &lt;td&gt;出生日期&lt;/td&gt;
-  &lt;td&gt;***&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr align=&quot;center&quot;&gt;
-  &lt;td&gt;性别&lt;/td&gt;
-  &lt;td&gt;男&lt;/td&gt;
-  &lt;td&gt;政治面貌&lt;/td&gt;
-  &lt;td&gt;***&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr align=&quot;center&quot;&gt;
-  &lt;td&gt;民族&lt;/td&gt;
-  &lt;td&gt;汉&lt;/td&gt;
-  &lt;td&gt;身份证号&lt;/td&gt;
-  &lt;td&gt;***&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr align=&quot;center&quot;&gt;
-  &lt;td&gt;联系方式&lt;/td&gt;
-  &lt;td&gt;***&lt;/td&gt;
-  &lt;td&gt;通讯地址&lt;/td&gt;
-  &lt;td&gt;兰州大学&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr align=&quot;center&quot;&gt;
-  &lt;td&gt;电子邮件&lt;/td&gt;
-  &lt;td&gt;***&lt;/td&gt;
-  &lt;td&gt;计算机&lt;/td&gt;
-  &lt;td&gt;NCRE2(C语言)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr align=&quot;center&quot;&gt;
-  &lt;td&gt;申请专业、导师&lt;/td&gt;
-  &lt;td&gt;***&lt;/td&gt;
-  &lt;td&gt;英语&lt;/td&gt;
-  &lt;td&gt;CET6&lt;/td&gt;
-&lt;/tr&gt;</code></pre>
-  </table>
-
-  <div style="width:20%;float:right;">
-  <img src="/about/qrcode.jpg" width="120"><br>
-  <!-- <iframe width="200" height="50" frameborder="0" scrolling="no" hspace="0" src="https://i.tianqi.com/?c=code&a=getcode&id=35&py=chongqing&site=34&icon=1"></iframe> -->
-</div>
-
-<h2 align='left'>教育背景</h2>
-<hr>
-
-  <table frame=void rules=none border="1" height="" width="100%" cellspacing="0" align="left">
-
-<pre><code>&lt;tr align=&quot;center&quot;&gt;
-  &lt;td&gt;2019至今&lt;/td&gt;
-  &lt;td&gt;兰州大学核科学与技术学院&lt;/td&gt;
-  &lt;td&gt;粒子物理与原子核物理&lt;/td&gt;
-  &lt;td&gt;硕士&lt;/td&gt;
-  &lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr align=&quot;center&quot;&gt;
-  &lt;td&gt;2015.09-2019.06&lt;/td&gt;
-  &lt;td&gt;兰州大学核科学与技术学院&lt;/td&gt;
-  &lt;td&gt;应用物理（核物理基地班）&lt;/td&gt;
-  &lt;td&gt;学士&lt;/td&gt;
-  &lt;td&gt;GPA: &lt;5&lt;/td&gt;
-&lt;/tr&gt;</code></pre>
-  </table>
-
-<h2 align='left'>学术成果</h2>
-<hr>
-
-<h3 align='left'>专利</h3>
-
-  <table frame=void rules=none border="1" height="" width="100%" cellspacing="0" align="left">
-
-<pre><code>&lt;tr align=&quot;left&quot;&gt;
-  &lt;td width=&#39;70%&#39;&gt;&lt;li&gt;***&lt;/li&gt;&lt;/td&gt;
-  &lt;td&gt;三作&lt;/td&gt;
-  &lt;td&gt;在审&lt;/td&gt;
-&lt;/tr&gt;</code></pre>
-  </table>
-
-<h3 align='left'>论文</h3>
-
-  <table frame=void rules=none border="1" height="" width="100%" cellspacing="0" align="left">
-
-<pre><code>&lt;tr align=&quot;left&quot;&gt;
-  &lt;td width=&#39;70%&#39;&gt;&lt;li&gt;***&lt;/li&gt;&lt;/td&gt;
-  &lt;td&gt;二作&lt;/td&gt;
-  &lt;td&gt;已投&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr align=&quot;left&quot;&gt;
-  &lt;td&gt;&lt;li&gt;***&lt;/li&gt;&lt;/td&gt;
-  &lt;td&gt;一作&lt;/td&gt;
-  &lt;td&gt;在投&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;/table&gt;</code></pre>
-<h2 align='left'>科研工作（主要）</h2>
-<hr>
-
-<h3 align='right'>负责项目</h3>
-
-  <table frame=void rules=none border="1" height="" width="100%" cellspacing="0" align="left">
-
-<pre><code>&lt;tr align=&quot;left&quot;&gt;
-  &lt;td&gt;&lt;li&gt;***&lt;/li&gt;&lt;/td&gt;
-  &lt;td rowspan=&quot;2&quot;&gt;&lt;img src=&quot;/about/qrcode.jpg&quot; width=&quot;80&quot;&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr align=&quot;left&quot;&gt;
-  &lt;td&gt;&lt;li&gt;***&lt;/li&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;注：***&lt;/td&gt;
-&lt;/tr&gt;</code></pre>
-  </table>
-
-<h3 align='right'>参与项目</h3>
-
-  <table frame=void rules=none border="1" height="" width="100%" cellspacing="0" align="left">
-
-<pre><code>&lt;tr align=&quot;left&quot;&gt;
-  &lt;td&gt;
-    &lt;li&gt;***&lt;/li&gt;
-    &lt;li&gt;***&lt;/li&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;</code></pre>
-  </table>
-
-<h2 align='left'>专业技能</h2>
-<hr>
-
-  <table frame=void rules=none border="1" height="" width="100%" cellspacing="0" align="left">
-
-<pre><code>&lt;tr align=&quot;left&quot;&gt;
-  &lt;td&gt;
-    &lt;li&gt;***&lt;/li&gt;
-    &lt;li&gt;***&lt;/li&gt;
-    &lt;li&gt;***&lt;/li&gt;
-    &lt;li&gt;***&lt;/li&gt;
-    &lt;li&gt;***&lt;/li&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;</code></pre>
-  </table>
-
-<h2 align='left'>荣誉奖励</h2>
-<hr>
-
-  <table frame=void rules=none border="1" height="" width="100%" cellspacing="0" align="left">
-
-<pre><code>&lt;tr align=&quot;left&quot;&gt;
-  &lt;td&gt;硕士&lt;/td&gt;
-  &lt;td&gt;&lt;li&gt;***&lt;/li&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr align=&quot;left&quot;&gt;
-  &lt;td rowspan=&quot;2&quot;&gt;本科&lt;/td&gt;
-  &lt;td&gt;&lt;li&gt;***&lt;/li&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr align=&quot;left&quot;&gt;
-  &lt;td&gt;&lt;li&gt;***&lt;/li&gt;&lt;/td&gt;
-&lt;/tr&gt;</code></pre>
-  </table>
-
-<h2 align='left'>硕士论文开题报告及主要内容</h2>
-<hr>
-
-<hr>
-</div>]]></content>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@d3/collision-detection/2.js?v=3";
+(new Runtime).module(define, name => {
+  if (name === "chart") return Inspector.into(".chart")();
+});
+</script>]]></content>
       <categories>
         <category>just for fun</category>
       </categories>
