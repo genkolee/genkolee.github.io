@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Polar Clock</title>
+    <url>/2020/09/29/clock/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个以类似星球公转代表当前时间的小程序。</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div id="observablehq-8799067e"></div>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@mbostock/polar-clock.js?v=3";
+const inspect = Inspector.into("#observablehq-8799067e");
+(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+</script>]]></content>
+      <categories>
+        <category>just for fun</category>
+      </categories>
+  </entry>
+  <entry>
     <title>在线计算器</title>
     <url>/2020/07/27/calc/</url>
     <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;前一段时间自学了html和javascript，编了一个计算器练习了一下，CSS部分使用别人的模板，CSS有些麻烦就不自己搞了。我当然知道实用价值为零！</p>
@@ -69,62 +84,6 @@ import define from "https://api.observablehq.com/@d3/collision-detection/2.js?v=
       </categories>
   </entry>
   <entry>
-    <title>Polar Clock</title>
-    <url>/2020/09/29/clock/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个以类似星球公转代表当前时间的小程序。</p>
-<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div id="observablehq-8799067e"></div>
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@mbostock/polar-clock.js?v=3";
-const inspect = Inspector.into("#observablehq-8799067e");
-(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
-</script>]]></content>
-      <categories>
-        <category>just for fun</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>计算屏蔽已知活度的伽马点源所需铅层厚度</title>
-    <url>/2020/08/03/dose/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;课题组有时候需要知道屏蔽γ源需要的铅层厚度，当然可以用蒙特卡罗软件进行模拟，但是要想模拟效果好速度会很慢，正好前一段时间学习了辐射防护的课程，就利用公式编写了一个小脚本，结果不一定准确，娱乐一下还是可以的。</p>
-<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><form oninput="dos()" style="width:300px;margin:0px auto">
-<fieldset style="padding:10px;">
-  <legend>铅层厚度计算</legend>
-  <div>铅屏蔽层的厚度(单位:cm):</div>
-  <input type="text" id="thick" value="" style="background-color:#bccd95;text-align-last:right;" class="dose_inp" onfocus="this.blur()">
-  <div>请选择点源的种类:</div>
-  <select id="primary" class="dose_inp">
-    <option>Co-60</option>
-    <option>Cs-137</option>
-  </select>
-  <div>核素的活度(单位:Ci):</div>
-  <input type="text" id="activity" required class="dose_inp">
-  <div>距放射源的距离(单位:m):</div>
-  <input type="text" id="range" required class="dose_inp">
-  <div>屏蔽后的效果<...(单位:mSv &frasl; h):</div>
-  <input type="text" id="dose" required class="dose_inp">
-  <input type="reset" value="重置" style="margin:10px 0;" class="dose_inp">
-</fieldset>
-</form>
-<p><center>注：此结果仅供参考，屏蔽效果参考值见阅读全文。</center></p>
-
-<script src="/attach/dose/dos.js"></script>
-
-<link rel="stylesheet" href="/attach/dose/shell.css">
-
-<a id="more"></a>
-
-<hr>
-<h1 id="屏蔽效果值参考"><a href="#屏蔽效果值参考" class="headerlink" title="屏蔽效果值参考"></a>屏蔽效果值参考</h1><h2 id="国家标准"><a href="#国家标准" class="headerlink" title="国家标准"></a>国家标准</h2><img src="/attach/dose/dose1.jpg" width=300/>
-
-<h2 id="近代物理研究所操作参考值"><a href="#近代物理研究所操作参考值" class="headerlink" title="近代物理研究所操作参考值"></a>近代物理研究所操作参考值</h2><img src="/attach/dose/dose2.jpg" width=400/>
-
-<h2 id="医学照射参考剂量"><a href="#医学照射参考剂量" class="headerlink" title="医学照射参考剂量"></a>医学照射参考剂量</h2><img src="/attach/dose/dose3.jpeg" width=800/>]]></content>
-      <categories>
-        <category>tool</category>
-      </categories>
-  </entry>
-  <entry>
     <title>推荐几个制造噪音的网站</title>
     <url>/2020/08/03/noise/</url>
     <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;发现了几个制造噪音的小游戏，PC、移动端都可。操作简单粗暴，可以解压，放松心情。下面会附上原始网站链接，后两个加载速度会有点慢，请耐心等待一会儿。</p>
@@ -175,177 +134,44 @@ const inspect = Inspector.into("#observablehq-8799067e");
       </categories>
   </entry>
   <entry>
-    <title>Resume</title>
-    <url>/2021/07/10/resume/</url>
-    <content><![CDATA[<p>简历</p>
+    <title>计算屏蔽已知活度的伽马点源所需铅层厚度</title>
+    <url>/2020/08/03/dose/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;课题组有时候需要知道屏蔽γ源需要的铅层厚度，当然可以用蒙特卡罗软件进行模拟，但是要想模拟效果好速度会很慢，正好前一段时间学习了辐射防护的课程，就利用公式编写了一个小脚本，结果不一定准确，娱乐一下还是可以的。</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><form oninput="dos()" style="width:300px;margin:0px auto">
+<fieldset style="padding:10px;">
+  <legend>铅层厚度计算</legend>
+  <div>铅屏蔽层的厚度(单位:cm):</div>
+  <input type="text" id="thick" value="" style="background-color:#bccd95;text-align-last:right;" class="dose_inp" onfocus="this.blur()">
+  <div>请选择点源的种类:</div>
+  <select id="primary" class="dose_inp">
+    <option>Co-60</option>
+    <option>Cs-137</option>
+  </select>
+  <div>核素的活度(单位:Ci):</div>
+  <input type="text" id="activity" required class="dose_inp">
+  <div>距放射源的距离(单位:m):</div>
+  <input type="text" id="range" required class="dose_inp">
+  <div>屏蔽后的效果<...(单位:mSv &frasl; h):</div>
+  <input type="text" id="dose" required class="dose_inp">
+  <input type="reset" value="重置" style="margin:10px 0;" class="dose_inp">
+</fieldset>
+</form>
+<p><center>注：此结果仅供参考，屏蔽效果参考值见阅读全文。</center></p>
+
+<script src="/attach/dose/dos.js"></script>
+
+<link rel="stylesheet" href="/attach/dose/shell.css">
+
 <a id="more"></a>
 
-<div style="width:85%;text-align:left;border:0px solid #ccc;margin:0px auto;padding:0px;">
+<hr>
+<h1 id="屏蔽效果值参考"><a href="#屏蔽效果值参考" class="headerlink" title="屏蔽效果值参考"></a>屏蔽效果值参考</h1><h2 id="国家标准"><a href="#国家标准" class="headerlink" title="国家标准"></a>国家标准</h2><img src="/attach/dose/dose1.jpg" width=300/>
 
-<h1 align='center'>个人简历</h1>
+<h2 id="近代物理研究所操作参考值"><a href="#近代物理研究所操作参考值" class="headerlink" title="近代物理研究所操作参考值"></a>近代物理研究所操作参考值</h2><img src="/attach/dose/dose2.jpg" width=400/>
 
-<h2 align='left'>基本信息</h2>
-
-<div style="width:100%">
-  <table border="1" height="" width="100%" cellspacing="0" align="left">
-    <tr align="center">
-      <td>姓名</td>
-      <td>***</td>
-      <td>出生日期</td>
-      <td>***</td>
-      <td rowspan="6" width="25%"><img src="/about/qrcode.jpg" width="100%"></td>
-    </tr>
-    <tr align="center">
-      <td>性别</td>
-      <td>男</td>
-      <td>政治面貌</td>
-      <td>***</td>
-    </tr>
-    <tr align="center">
-      <td>民族</td>
-      <td>汉</td>
-      <td>身份证号</td>
-      <td>***</td>
-    </tr>
-    <tr align="center">
-      <td>联系方式</td>
-      <td>***</td>
-      <td>通讯地址</td>
-      <td>兰州大学</td>
-    </tr>
-    <tr align="center">
-      <td>电子邮件</td>
-      <td>***</td>
-      <td>计算机</td>
-      <td>NCRE2(C语言)</td>
-    </tr>
-    <tr align="center">
-      <td>申请专业、导师</td>
-      <td>***</td>
-      <td>英语</td>
-      <td>CET6</td>
-    </tr>
-
-  </table>
-
-</div>
-
-<h2 align='left'>教育背景</h2>
-
-  <table border="1" height="" width="100%" cellspacing="0" align="left">
-    <tr align="center">
-      <td>2019至今</td>
-      <td>兰州大学核科学与技术学院</td>
-      <td>粒子物理与原子核物理</td>
-      <td>硕士</td>
-      <td></td>
-    </tr>
-    <tr align="center">
-      <td>2015.09-2019.06</td>
-      <td>兰州大学核科学与技术学院</td>
-      <td>应用物理（核物理基地班）</td>
-      <td>学士</td>
-      <td>GPA: <5</td>
-    </tr>
-
-  </table>
-
-<h2 align='left'>学术成果</h2>
-
-<h3 align='left'>专利</h3>
-
-  <table border="1" height="" width="100%" cellspacing="0" align="left">
-    <tr align="left">
-      <td width='70%'><li>***</li></td>
-      <td>三作</td>
-      <td>在审</td>
-    </tr>
-
-  </table>
-
-<h3 align='left'>论文</h3>
-
-  <table border="1" height="" width="100%" cellspacing="0" align="left">
-    <tr align="left">
-      <td width='70%'><li>***</li></td>
-      <td>二作</td>
-      <td>已投</td>
-    </tr>
-    <tr align="left">
-      <td><li>***</li></td>
-      <td>一作</td>
-      <td>在投</td>
-    </tr>
-    </table>
-
-<h2 align='left'>科研工作（主要）</h2>
-
-<h3 align='right'>负责项目</h3>
-
-  <table border="1" height="" width="100%" cellspacing="0" align="left">
-    <tr align="left">
-      <td><li>***</li></td>
-      <td rowspan="3" width="20%"><img src="/about/qrcode.jpg" width="100%"></td>
-    </tr>
-    <tr align="left">
-      <td><li>***</li></td>
-    </tr>
-    <tr>
-      <td>注：***</td>
-    </tr>
-
-  </table>
-
-<h3 align='right'>参与项目</h3>
-
-  <table border="1" height="" width="100%" cellspacing="0" align="left">
-    <tr align="left">
-      <td>
-        <li>***</li>
-        <li>***</li>
-      </td>
-    </tr>
-
-  </table>
-
-<h2 align='left'>专业技能</h2>
-
-  <table border="1" height="" width="100%" cellspacing="0" align="left">
-    <tr align="left">
-      <td>
-        <li>***</li>
-        <li>***</li>
-        <li>***</li>
-        <li>***</li>
-        <li>***</li>
-      </td>
-    </tr>
-
-  </table>
-
-<h2 align='left'>荣誉奖励</h2>
-
-  <table border="1" height="" width="100%" cellspacing="0" align="left">
-    <tr align="left">
-      <td>硕士</td>
-      <td><li>***</li></td>
-    </tr>
-    <tr align="left">
-      <td rowspan="2">本科</td>
-      <td><li>***</li></td>
-    </tr>
-    <tr align="left">
-      <td><li>***</li></td>
-    </tr>
-
-  </table>
-
-<h2 align='left'>硕士论文开题报告及主要内容</h2>
-
-<p>…</p>
-</div>]]></content>
+<h2 id="医学照射参考剂量"><a href="#医学照射参考剂量" class="headerlink" title="医学照射参考剂量"></a>医学照射参考剂量</h2><img src="/attach/dose/dose3.jpeg" width=800/>]]></content>
       <categories>
-        <category>just for fun</category>
+        <category>tool</category>
       </categories>
   </entry>
 </search>
