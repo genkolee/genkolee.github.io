@@ -1,72 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>在线计算器</title>
-    <url>/2020/07/27/calc/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;前一段时间自学了html和javascript，编了一个计算器练习了一下，CSS部分使用别人的模板，CSS有些麻烦就不自己搞了。我当然知道实用价值为零！</p>
-<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><form class="calc">
-  <p class="calc-display">
-    <input type="text" name="result" id="result" value="" class="calc-display-input" onfocus="this.blur()">
-  </p>
-  <p class="calc-row">
-    <button type="button" class="calc-button calc-button-gray" onclick="add('(')">(</button>
-    <button type="button" class="calc-button calc-button-gray" onclick="add(')')">)</button>
-    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('%')">%</button>
-    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('/')">/</button>
-  </p>
-  <p class="calc-row">
-    <button type="button" class="calc-button" onclick="add('7')">7</button>
-    <button type="button" class="calc-button" onclick="add('8')">8</button>
-    <button type="button" class="calc-button" onclick="add('9')">9</button>
-    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('*')">*</button>
-  </p>
-  <p class="calc-row">
-    <button type="button" class="calc-button" onclick="add('4')">4</button>
-    <button type="button" class="calc-button" onclick="add('5')">5</button>
-    <button type="button" class="calc-button" onclick="add('6')">6</button>
-    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('-')">-</button>
-  </p>
-  <p class="calc-row">
-    <button type="button" class="calc-button" onclick="add('1')">1</button>
-    <button type="button" class="calc-button" onclick="add('2')">2</button>
-    <button type="button" class="calc-button" onclick="add('3')">3</button>
-    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('+')">+</button>
-  </p>
-  <p class="calc-row">
-    <button type="button" class="calc-button" onclick="add('0')">0</button>
-    <button type="button" class="calc-button" onclick="add('.')">.</button>
-    <button type="button" class="calc-button" onclick="copy('')">C</button>
-    <button type="button" class="calc-button calc-button-yellow calc-button-big" onclick="calc()">=</button>
-  </p>
-</form>
-
-<script>
-  function add(x) { document.getElementById('result').value += x }
-  function copy(x) { document.getElementById('result').value = x }
-  function calc() { try { copy(eval(document.getElementById('result').value)) } catch(calc) { copy('Error') } }
-</script>
-
-<link rel="stylesheet" href="/attach/calc/shell.css">]]></content>
-      <categories>
-        <category>tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Polar Clock</title>
-    <url>/2020/09/29/clock/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个以类似星球公转代表当前时间的小程序。</p>
-<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div id="observablehq-8799067e"></div>
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@mbostock/polar-clock.js?v=3";
-const inspect = Inspector.into("#observablehq-8799067e");
-(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
-</script>]]></content>
-      <categories>
-        <category>just for fun</category>
-      </categories>
-  </entry>
-  <entry>
     <title>计算屏蔽已知活度的伽马点源所需铅层厚度</title>
     <url>/2020/08/03/dose/</url>
     <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;课题组有时候需要知道屏蔽γ源需要的铅层厚度，当然可以用蒙特卡罗软件进行模拟，但是要想模拟效果好速度会很慢，正好前一段时间学习了辐射防护的课程，就利用公式编写了一个小脚本，结果不一定准确，娱乐一下还是可以的。</p>
@@ -128,6 +62,38 @@ const inspect = Inspector.into("#observablehq-8799067e");
       </categories>
   </entry>
   <entry>
+    <title>Polar Clock</title>
+    <url>/2020/09/29/clock/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个以类似星球公转代表当前时间的小程序。</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div id="observablehq-8799067e"></div>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@mbostock/polar-clock.js?v=3";
+const inspect = Inspector.into("#observablehq-8799067e");
+(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+</script>]]></content>
+      <categories>
+        <category>just for fun</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Bubble</title>
+    <url>/2021/01/02/bubble/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个Bubble交互小程序，我可以玩一天😂。</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div class="chart" style="overflow:auto; width:100%;"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@d3/collision-detection/2.js?v=3";
+(new Runtime).module(define, name => {
+  if (name === "chart") return Inspector.into(".chart")();
+});
+</script>]]></content>
+      <categories>
+        <category>just for fun</category>
+      </categories>
+  </entry>
+  <entry>
     <title>推荐几个制造噪音的网站</title>
     <url>/2020/08/03/noise/</url>
     <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;发现了几个制造噪音的小游戏，PC、移动端都可。操作简单粗暴，可以解压，放松心情。下面会附上原始网站链接，后两个加载速度会有点慢，请耐心等待一会儿。</p>
@@ -158,20 +124,54 @@ const inspect = Inspector.into("#observablehq-8799067e");
       </categories>
   </entry>
   <entry>
-    <title>Bubble</title>
-    <url>/2021/01/02/bubble/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;这是一个Bubble交互小程序，我可以玩一天😂。</p>
-<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><div class="chart" style="overflow:auto; width:100%;"></div>
+    <title>在线计算器</title>
+    <url>/2020/07/27/calc/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&emsp;&emsp;前一段时间自学了html和javascript，编了一个计算器练习了一下，CSS部分使用别人的模板，CSS有些麻烦就不自己搞了。我当然知道实用价值为零！</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><form class="calc">
+  <p class="calc-display">
+    <input type="text" name="result" id="result" value="" class="calc-display-input" onfocus="this.blur()">
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button calc-button-gray" onclick="add('(')">(</button>
+    <button type="button" class="calc-button calc-button-gray" onclick="add(')')">)</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('%')">%</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('/')">/</button>
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button" onclick="add('7')">7</button>
+    <button type="button" class="calc-button" onclick="add('8')">8</button>
+    <button type="button" class="calc-button" onclick="add('9')">9</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('*')">*</button>
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button" onclick="add('4')">4</button>
+    <button type="button" class="calc-button" onclick="add('5')">5</button>
+    <button type="button" class="calc-button" onclick="add('6')">6</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('-')">-</button>
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button" onclick="add('1')">1</button>
+    <button type="button" class="calc-button" onclick="add('2')">2</button>
+    <button type="button" class="calc-button" onclick="add('3')">3</button>
+    <button type="button" class="calc-button calc-button-red calc-button-big" onclick="add('+')">+</button>
+  </p>
+  <p class="calc-row">
+    <button type="button" class="calc-button" onclick="add('0')">0</button>
+    <button type="button" class="calc-button" onclick="add('.')">.</button>
+    <button type="button" class="calc-button" onclick="copy('')">C</button>
+    <button type="button" class="calc-button calc-button-yellow calc-button-big" onclick="calc()">=</button>
+  </p>
+</form>
 
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@d3/collision-detection/2.js?v=3";
-(new Runtime).module(define, name => {
-  if (name === "chart") return Inspector.into(".chart")();
-});
-</script>]]></content>
+<script>
+  function add(x) { document.getElementById('result').value += x }
+  function copy(x) { document.getElementById('result').value = x }
+  function calc() { try { copy(eval(document.getElementById('result').value)) } catch(calc) { copy('Error') } }
+</script>
+
+<link rel="stylesheet" href="/attach/calc/shell.css">]]></content>
       <categories>
-        <category>just for fun</category>
+        <category>tool</category>
       </categories>
   </entry>
 </search>
